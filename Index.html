@@ -1,45 +1,69 @@
 <!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Mi presentación 2</title>
-        <link rel="stylesheet" href="reveal.js/dist/reset.css">
-        <link rel="stylesheet" href="reveal.js/dist/reveal.css">
-        <link rel="stylesheet" href="reveal.js/dist/theme/black.css">
-        <style>
-            h1, h2 { font-family: 'Arial', sans-serif; color: #fff; }
-            /* Puedes cambiar la fuente y el color de acuerdo a tus preferencias */
-        </style>
-    </head>
-    <body>
-        <div class="reveal">
-            <div class="slides">
-                <section style="background-image:url('ruta/a/tu/imagen.jpg');">
-                    <h1>Título de la primera diapositiva</h1>
-                    <h2>Subtítulo de la primera diapositiva</h2>
-                </section>
-                <section style="background-image:url('ruta/a/tu/imagen2.jpg');">
-                    <h2>Contenidos de la segunda diapositiva</h2>
-                    <!-- Aquí puedes agregar el contenido de tu diapositiva -->
-                </section>
-                <section>
-                    <h2>Desarrollo de la clase</h2>
-                    <!-- Aquí puedes agregar el contenido de tu diapositiva -->
-                </section>
-                <section>
-                    <h2>Bibliografía</h2>
-                    <!-- Aquí puedes agregar el contenido de tu diapositiva -->
-                </section>
-            </div>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Mi presentación</title>
+
+    <link rel="stylesheet" href="d:/Users/dpabon180/Downloads/reveal.js-master/dist/reveal.css">
+    <link rel="stylesheet" href="d:/Users/dpabon180/Downloads/reveal.js-master/dist/theme/default.css">
+
+    <style>
+        /* Aquí puedes definir tus estilos personalizados para títulos, subtítulos, etc. */
+        h1 {
+            font-family: 'Tu fuente para títulos', sans-serif;
+        }
+        h2 {
+            font-family: 'Tu fuente para subtítulos', sans-serif;
+        }
+        p {
+            font-family: 'Tu fuente para texto normal', sans-serif;
+        }
+        .background {
+            background-image: url('path/to/your/image.jpg');
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- Diapositiva 1 -->
+            <section class="background">
+                <h1>Título</h1>
+                <h2>Subtítulo</h2>
+            </section>
+
+            <!-- Diapositiva 2 -->
+            <section class="background">
+                <p>Contenido de la diapositiva</p>
+            </section>
+
+            <!-- Diapositiva 3 -->
+            <section class="background">
+                <p>Desarrollo de la clase</p>
+            </section>
+
+            <!-- Diapositiva 4 -->
+            <section class="background">
+                <p>Bibliografía</p>
+            </section>
         </div>
-        <script src="reveal.js/dist/reveal.js"></script>
-        <script>
-            Reveal.initialize({
-                transition: 'cube',
-                zoom: true,
-                fullscreen: true,
-            });
-        </script>
-    </body>
+    </div>
+
+    <script src="d:/Users/dpabon180/Downloads/reveal.js-master/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            transition: 'cube', // transición de cubo
+            zoom: true,
+            fullscreen: true,
+        });
+    </script>
+</body>
+
 </html>
+
 
