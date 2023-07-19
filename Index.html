@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
@@ -12,15 +12,8 @@
     <link rel="stylesheet" href="reveal.js-master/dist/theme/black.css">
 
     <style>
-        /* Aquí puedes definir tus estilos personalizados para títulos, subtítulos, etc. */
-        h1 {
-            font-family: 'Tu fuente para títulos', sans-serif;
-        }
-        h2 {
-            font-family: 'Tu fuente para subtítulos', sans-serif;
-        }
-        p {
-            font-family: 'Tu fuente para texto normal', sans-serif;
+        h1, h2, h3, p, ul {
+            font-family: 'Arial', sans-serif;
         }
         .background {
             background-image: url('path/to/your/image.jpg');
@@ -32,64 +25,53 @@
 <body>
     <div class="reveal">
         <div class="slides">
-            <!-- Diapositiva 1 -->
+            <!-- Diapositivas 1-3 -->
             <section class="background">
                 <h1>Título</h1>
                 <h2>Subtítulo</h2>
             </section>
-
-            <!-- Diapositiva 2 -->
             <section class="background">
                 <p>Contenido de la diapositiva</p>
             </section>
-
-            <!-- Diapositiva 3 -->
             <section class="background">
                 <p>Desarrollo de la clase</p>
             </section>
 
             <!-- Diapositiva 4 -->
-            <section tyle="font-size: 12px;">
-    <h2>Ley de Coulomb</h2>
-    <p style="font-size: 11px;">La Ley de Coulomb describe la fuerza entre dos cargas eléctricas. La fórmula es la siguiente:</p>
+            <section style="font-size: 12px;">
+                <h2>Ley de Coulomb</h2>
+                <p>La Ley de Coulomb describe la fuerza entre dos cargas eléctricas. La fórmula es la siguiente:</p>
+                <p><span class="math display">\[\vec{F}=k\frac{q_1 q_2}{r^2}\hat{r}\]</span></p>
+                <p>donde:</p>
+                <ul>
+                    <li>F es la fuerza entre las cargas,</li>
+                    <li>k es la constante de Coulomb (8.9875517923(14)×10<sup>9</sup> N m² C⁻²),</li>
+                    <li>q1 y q2 son las cantidades de carga, y</li>
+                    <li>r es la distancia entre las cargas.</li>
+                </ul>
+                <h3>Calculadora de Ley de Coulomb</h3>
+                <div class="formula">
+                    <table class="maths" title="Coulomb's law (with Coulomb constant)">
+                        <tbody>
+                            <tr>
+                                <td rowspan="2" class="equation">F = k * (</td>
+                                <td class="solidus">
+                                    <input class="input-field" type="number" id="charge1" step="any" placeholder="q1"> *
+                                    <input class="input-field" type="number" id="charge2" step="any" placeholder="q2">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input class="input-field" type="number" id="distance" step="any" placeholder="r"><sup>²</sup>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <button id="calculate">Calcular</button>
+                <p id="result"></p>
+            </section>
 
-
-    <p><span class="math display">\[\vec{F}=k\frac{q_1 q_2}{r^2}\hat{r}\]</span></p>
-
-
-    <p style="font-size: 11px;">donde:</p>
-    <ul style="font-size: 11px;">
-        <li>F es la fuerza entre las cargas,</li>
-        <li>k es la constante de Coulomb (8.9875517923(14)×10<sup>9</sup> N m² C⁻²),</li>
-        <li>q1 y q2 son las cantidades de carga, y</li>
-        <li>r es la distancia entre las cargas.</li>
-    </ul>
-    <h3 style="font-size: 11px;">Calculadora de Ley de Coulomb</h3>
-
-    <div class="formula">
-        <table class="maths" title="Coulomb's law (with Coulomb constant)">
-            <tbody>
-                <tr>
-                    <td rowspan="2" class="equation">F = k * (</td>
-                    <td class="solidus">
-                        <input class="input-field" type="number" id="charge1" step="any" placeholder="q1"> *
-                        <input class="input-field" type="number" id="charge2" step="any" placeholder="q2">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input class="input-field" type="number" id="distance" step="any" placeholder="r"><sup>²</sup>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <button id="calculate">Calcular</button>
-    <p id="result"></p>
-</section>
-
-            
             <!-- Diapositiva 5 -->
             <section class="background">
                 <p>Bibliografía</p>
@@ -100,13 +82,13 @@
     <script src="reveal.js-master/dist/reveal.js"></script>
     <script>
         Reveal.initialize({
-            transition: 'cube', // transición de cubo
-            zoom: true,
-            fullscreen: true,
+            transition: 'cube',
+            dependencies: [
+                { src: 'reveal.js-master/plugin/zoom/zoom.js', async: true },
+                { src: 'reveal.js-master/plugin/fullscreen/fullscreen.js', async: true },
+            ]
         });
     </script>
 </body>
 
 </html>
-
-
