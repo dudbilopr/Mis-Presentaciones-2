@@ -19,6 +19,9 @@
             background-image: url('path/to/your/image.jpg');
             background-size: cover;
         }
+        .equation {
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -54,14 +57,15 @@
                     <table class="maths" title="Coulomb's law (with Coulomb constant)">
                         <tbody>
                             <tr>
-                                <td rowspan="2" class="equation">F = k * (</td>
+                                <td class="equation">F = k * (</td>
                                 <td class="solidus">
                                     <input class="input-field" type="number" id="charge1" step="any" placeholder="q1"> *
                                     <input class="input-field" type="number" id="charge2" step="any" placeholder="q2">
                                 </td>
+                                <td class="equation">)</td>
                             </tr>
                             <tr>
-                                <td>
+                                <td colspan="3" class="equation">
                                     <input class="input-field" type="number" id="distance" step="any" placeholder="r"><sup>²</sup>
                                 </td>
                             </tr>
@@ -87,6 +91,16 @@
                 { src: 'reveal.js-master/plugin/zoom/zoom.js', async: true },
                 { src: 'reveal.js-master/plugin/fullscreen/fullscreen.js', async: true },
             ]
+        });
+
+        // Calculadora Ley de Coulomb
+        document.getElementById('calculate').addEventListener('click', function() {
+            var k = 8.99 * Math.pow(10, 9);
+            var q1 = document.getElementById('charge1').value;
+            var q2 = document.getElementById('charge2').value;
+            var r = document.getElementById('distance').value;
+            var result = k * q1 * q2 / Math.pow(r, 2);
+            document.getElementById('result').innerText = "F = " + result + " N";
         });
     </script>
 </body>
