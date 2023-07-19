@@ -94,13 +94,28 @@
         });
 
         // Calculadora Ley de Coulomb
-        document.getElementById('calculate').addEventListener('click', function() {
-            var k = 8.99 * Math.pow(10, 9);
-            var q1 = document.getElementById('charge1').value;
-            var q2 = document.getElementById('charge2').value;
-            var r = document.getElementById('distance').value;
-            var result = k * q1 * q2 / Math.pow(r, 2);
-            document.getElementById('result').innerText = "F = " + result + " N";
+        // Agrega un controlador de eventos al botón
+        calculateButton.addEventListener('click', function () {
+            try {
+                // Recupera los valores de los campos de entrada
+                const charge1 = document.getElementById('charge1').value;
+                const charge2 = document.getElementById('charge2').value;
+                const distance = document.getElementById('distance').value;
+
+                // Valida que los campos no estén vacíos
+                if (!charge1 || !charge2 || !distance) {
+                    throw new Error("Por favor ingresa todos los valores");
+                }
+
+                // Calcula la fuerza según la Ley de Coulomb
+                const result = 8.99 * Math.pow(10, 9) * charge1 * charge2 / Math.pow(distance, 2);
+
+                // Muestra el resultado
+                document.getElementById('result').innerText = "F = " + result.toFixed(2) + " N";
+            } catch (error) {
+                // Si algo sale mal, muestra el error
+                document.getElementById('result').innerText = "Error: " + error.message;
+            }
         });
     </script>
 </body>
