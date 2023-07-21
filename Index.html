@@ -10,13 +10,15 @@
 
     <link rel="stylesheet" href="reveal.js-master/dist/reveal.css">
     <link rel="stylesheet" href="reveal.js-master/dist/theme/black.css">
+    <link rel="stylesheet" href="reveal.js-master/plugin/menu/menu.css">
+    <script src="reveal.js-master/plugin/menu/menu.js"></script>
 
     <style>
         h1, h2, h3, p, ul {
             font-family: 'Arial', sans-serif;
         }
         .background {
-            background-image: url('path/to/your/image.jpg');
+            background-image: url('Images/FONDO.png');
             background-size: cover;
         }
         .equation {
@@ -29,15 +31,41 @@
     <div class="reveal">
         <div class="slides">
             <!-- Diapositivas 1-3 -->
-            <section class="background">
-                <h1>Electromagnetismo</h1>
-                <h4>Ley de Coulomb</h4>
-                <p>
-                    <small>Dudbil Pabon <!--/ <a href="http://twitter.com/guillearch">@guillearch</a></small> -->
-                        <small>Sesíon 1</small>
-                </p>
+            <section>
+            <h2>Electromagnetismo</h2>
+            <h4>Ley de Coulomb</h4>
+            <p align="right">
+            <small>Dudbil Pabon </small> <!-- / <a href="http://twitter.com/guillearch">@guillearch</a></small> -->
+            <br>
+            <small>Sesíon 1</small>
+            </p>
             </section>
-                        
+
+<section>
+    <h2>Contenidos</h2>
+    <div style="display:flex;align-items:center;margin-bottom:1em;">
+        <div style="flex:1;">
+            <img src='Images/FONDO.png' alt="Descripción de la imagen" style="max-width:100%;">
+        </div>
+        <div style="flex:1;">
+            <ul style="font-size:20px;">
+                    <li><a href="#/3">Carga</a></li>
+                    <li><a href="#/4">Tipos de electrificacion</a></li>
+                    <li><a href="#/5">Ley de Coulomb</a></li>
+                    <li><a href="#/6">Ejercicios</a></li>
+                </ul>
+        </div>
+    </div>
+    <p>Este es más contenido que ocupará todo el ancho de la diapositiva.</p>
+</section>
+
+               
+
+<section data-menu-title="Mi Diapositiva">
+    <h2>Mi Diapositiva</h2>
+    <!-- ... -->
+</section>
+         
             <section class="background">
                 <h1>Título</h1>
                 <h2>Subtítulo</h2>
@@ -48,6 +76,8 @@
             <section class="background">
                 <p>Desarrollo de la clase</p>
             </section>
+
+
 
             <!-- Diapositiva 4 -->
             <section style="font-size: 12px;">
@@ -99,6 +129,7 @@
             dependencies: [
                 { src: 'reveal.js-master/plugin/zoom/zoom.js', async: true },
                 { src: 'reveal.js-master/plugin/fullscreen/fullscreen.js', async: true },
+                { src: 'reveal.js-master/plugin/menu/menu.js' },
             ]
         });
 
