@@ -13,9 +13,12 @@
     <link rel="stylesheet" href="reveal.js-master/plugin/menu/menu.css">
     <script src="reveal.js-master/plugin/menu/menu.js"></script>
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+
+
     <style>
         h1, h2, h3, p, ul {
-            font-family: 'Arial', sans-serif;
+            'Helvetica', sans-serif;
         }
         .background {
             background-image: url('Images/FONDO.png');
@@ -25,6 +28,49 @@
             text-align: center;
         }
     </style>
+
+    <style>
+        .title-box {
+            background: linear-gradient(to right, #f09, #3023AE);
+            padding: 20px;
+            color: white;
+            width: 95%;
+            text-align: center;
+        }
+        .trapezoid {
+            border-bottom: 80px solid #3023AE;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            height: 0;
+            width: 200px;
+            margin: 20px auto;
+            position: relative;
+        }
+        .trapezoid:before {
+            content: "";
+            position: absolute;
+            border-bottom: 80px solid #f09;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            height: 0;
+            width: 200px;
+            top: 60px;
+            left: -50px;
+            z-index: -1;
+        }
+        .footer {
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+    text-align: right; /* Alinear a la derecha */
+    padding: 10px; /* Ajustar el alto */
+    color: black; /* Ajustar el color del texto */
+    background: transparent; /* Sin color de fondo */
+    font-size: 0.5em; /* Ajustar el tamaño del texto */
+}
+
+    </style>
+
 </head>
 
 <body>
@@ -58,6 +104,30 @@
     </div>
     <p>Este es más contenido que ocupará todo el ancho de la diapositiva.</p>
 </section>
+
+<section>
+    <h2 class="title-box">Carga eléctrica</h2>
+    
+    <p style="font-size:20px;">La carga eléctrica es una propiedad fundamental de algunas partículas subatómicas que determina sus interacciones electromagnéticas. Las cargas eléctricas vienen en dos tipos, denominadas positivas y negativas.</p>
+
+    <div style="display:flex;align-items:center;margin-bottom:1em;">
+        <div style="flex:1;">      
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CyCHoCxcqxA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+</div>
+
+<div style="flex:1;">
+    <h4>Ejemplos</h3>
+    <ul style="font-size:20px;">
+        <li>Un ejemplo de una partícula con carga positiva es el protón.</li>
+        <li>Un ejemplo de una partícula con carga negativa es el electrón.</li>
+        <li>En un átomo neutro, el número de electrones (carga <FONT COLOR="yellow">negativa</FONT>) es igual al número de protones (carga <FONT COLOR="yellow">positiva</FONT>), por lo que las cargas se cancelan entre sí, dando como resultado una carga neta de cero.</li>
+    </ul>
+</div>
+    </div>
+<div class="footer"></div>
+</section>
+
 
                
 
@@ -158,6 +228,12 @@
             }
         });
     </script>
+
+<script>
+document.querySelectorAll('.footer').forEach((footer, index) => {
+    footer.textContent = `${index + 1}`;
+});
+</script>
 </body>
 
 </html>
