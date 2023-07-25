@@ -28,12 +28,16 @@
             text-align: center;
         }
 
-        .title-box {
-            background: linear-gradient(to right, #f09, #3023AE);
-            padding: 20px;
-            color: white;
-            width: 95%;
-            text-align: center;
+        h2.title-box {
+    background: linear-gradient(to right, #f09, #3023AE);
+    padding: 20px;
+    color: white;
+    width: 95%;
+    text-align: center;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    font-size: 45px;
+}
         }
         .trapezoid {
             border-bottom: 80px solid #3023AE;
@@ -71,6 +75,21 @@
     box-shadow: 14px 14px 20px 0 rgba(20, 20, 20, 0.3);
 }
 
+.flex-container {
+  display: flex;
+  background-color: grey;
+  flex: 1 1 auto; 
+}
+.flex-item {
+  background-color: black;
+  flex: 1 1 auto;
+  margin: 4px;
+  text-align: center;
+  line-height: 10px;
+  font-size: 12px;
+  gap: 10px;
+}
+
     </style>
 
 
@@ -91,7 +110,7 @@
             </section>
 
 <section>
-    <h2>Contenidos</h2>
+    <h2 class="title-box">Contenidos</h2>
     <div style="display:flex;align-items:center;margin-bottom:1em;">
         <div style="flex:1;">
             <img src='Images/FONDO.png' alt="Descripción de la imagen" style="max-width:100%;">
@@ -155,24 +174,22 @@
     <h2 class="title-box">Métodos de Electrización</h2>
     <p style="font-size:20px;">La electrización es el proceso de redistribuir cargas eléctricas en un objeto, lo que a menudo resulta en un objeto cargado neto. Existen tres métodos principales: por fricción, contacto e inducción.</p>
     
-    <div style="display:flex;justify-content:space-around;font-size:12px;">
-        <div style="flex:1;">
+    <div class="flex-container">
+        <div class="flex-item">
             <h2>Por fricción</h2>
-<iframe width="560" height="215" src="https://www.youtube.com/embed/SExgYesO_bg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="215" src="https://www.youtube.com/embed/SExgYesO_bg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <p>Este proceso implica frotar dos objetos diferentes juntos, lo que causa que los electrones se transfieran de un objeto a otro.</p>
-            
         </div>
-        <div style="flex:1;">
+        <div class="flex-item">
             <h2>Por contacto</h2>
-<iframe width="560" height="215" src="https://www.youtube.com/embed/3Ptu07enIsY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <p>Un objeto cargado puede transferir carga a otro objeto con el que entra en contacto directo.</p>
-            
+            <iframe width="560" height="215" src="https://www.youtube.com/embed/3Ptu07enIsY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <p>Un objeto cargado puede transferir carga a otro objeto con el que entra en contacto directo.</p>           
         </div>
-        <div style="flex:1; box-shadow: 10px 10px 5px grey;">
+
+        <div class="flex-item">
             <h2>Por inducción</h2>
-<iframe width="560" height="215" src="https://www.youtube.com/embed/azDFR5RwVkA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="215" src="https://www.youtube.com/embed/azDFR5RwVkA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <p>La carga puede redistribuirse en un objeto neutro cercano sin contacto físico directo con un objeto cargado.</p>
-            
         </div>
     </div>
     <div class="footer"></div>
